@@ -8,7 +8,7 @@
  *main - entry point of the simple shell
  *Return: always successs
  */
-int main(void)
+int _noargs(void)
 {
 	char *buffer = NULL;
 	size_t len = 0;
@@ -44,5 +44,5 @@ int main(void)
 		}
 	}
 	free(buffer);
-	return (0);
+	return (1);
 }
