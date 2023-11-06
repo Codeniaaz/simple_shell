@@ -204,12 +204,12 @@ char **n_get_environ(memb_t *);
 int n_unsetenv(memb_t *, char *);
 int n_setenv(memb_t *, char *, char *);
 
-/* toem_history.c */
-char *get_history_file(memb_t *info);
-int write_history(memb_t *info);
-int read_history(memb_t *info);
-int build_history_list(memb_t *info, char *buf, int linecount);
-int renumber_history(memb_t *info);
+/************* a_history.c ***************/
+char *n_get_history_file(memb_t *member);
+int n_write_history(memb_t *member);
+int n_read_history(memb_t *member);
+int n_build_history_list(memb_t *member, char *buffer, int line_count);
+int n_renumber_history(memb_t *member);
 
 /******************* a_lists.c ******************/
 list_t *n_add_node(list_t **, const char *, int);

@@ -139,11 +139,11 @@ int n_delete_node_at_index(list_t **head, unsigned int index)
 }
 
 /**
- * free_list - Frees all nodes of a linked list.
+ * n_free_list - Frees all nodes of a linked list.
  * @head_ptr: Address of pointer to head node.
  * Return: nothing, void.
  */
-void free_list(list_t **head_ptr)
+void n_free_list(list_t **head_ptr)
 {
 	list_t *node, *next_node, *head;
 
