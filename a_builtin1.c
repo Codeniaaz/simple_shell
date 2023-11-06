@@ -7,7 +7,7 @@
  */
 int n_myhistory(memb_t *member)
 {
-	print_list(member->history);
+	n_print_list(member->history);
 	return (0);
 }
 
@@ -52,6 +52,7 @@ int n_set_alias(memb_t *memb, char *str)
 	n_unset_alias(memb, str);
 	return (n_add_node_end(&(memb->alias), str, 0) == NULL);
 }
+
 /**
  *n_unset_alias - delete the alias for a command
  *@memb: Struct containg members used in most functions
@@ -63,7 +64,7 @@ int n_unset_alias(memb_t *memb, char *str)
 	char *p, c;
 	int ret;
 
-	p = _strchr(str, '=');
+	p = n_strchr(str, '=');
 	if (!p)
 		return (1);
 	c = *p;
