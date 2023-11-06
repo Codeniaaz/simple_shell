@@ -199,10 +199,10 @@ int n_mysetenv(memb_t *);
 int n_myunsetenv(memb_t *);
 int n_populate_env_list(memb_t *);
 
-/* toem_getenv.c */
-char **get_environ(memb_t *);
-int _unsetenv(memb_t *, char *);
-int _setenv(memb_t *, char *, char *);
+/************* a_getenv.c ************/
+char **n_get_environ(memb_t *);
+int n_unsetenv(memb_t *, char *);
+int n_setenv(memb_t *, char *, char *);
 
 /* toem_history.c */
 char *get_history_file(memb_t *info);
@@ -211,12 +211,12 @@ int read_history(memb_t *info);
 int build_history_list(memb_t *info, char *buf, int linecount);
 int renumber_history(memb_t *info);
 
-/* toem_lists.c */
-list_t *add_node(list_t **, const char *, int);
-list_t *add_node_end(list_t **, const char *, int);
-size_t print_list_str(const list_t *);
-int delete_node_at_index(list_t **, unsigned int);
-void free_list(list_t **);
+/******************* a_lists.c ******************/
+list_t *n_add_node(list_t **, const char *, int);
+list_t *n_add_node_end(list_t **, const char *, int);
+size_t n_print_list_str(const list_t *);
+int n_delete_node_at_index(list_t **, unsigned int);
+void n_free_list(list_t **);
 
 /* toem_lists1.c */
 size_t list_len(const list_t *);
