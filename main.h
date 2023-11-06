@@ -173,10 +173,10 @@ int print_d(int, int);
 char *convert_number(long int, int, int);
 void remove_comments(char *);
 
-/* toem_builtin.c */
-int _myexit(memb_t *);
-int _mycd(memb_t *);
-int _myhelp(memb_t *);
+/************** a_builtin.c ***************/
+int n_myexit(memb_t *);
+int n_mycd(memb_t *);
+int n_myhelp(memb_t *);
 
 /************ a_builtin1.c *********/
 int n_myhistory(memb_t *);

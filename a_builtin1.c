@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *n_myhistory - displays the history list each command on seperate line 
+ *n_myhistory - displays the history list each command on seperate line
  *@member: Struct containg members used in most functions
  *Return: always 0;
  */

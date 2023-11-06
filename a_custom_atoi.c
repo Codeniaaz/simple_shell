@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- *n_interactive - checks whether the current interaction 
- *with a program is happening in an interactive mode 
+ *n_interactive - checks whether the current interaction
+ *with a program is happening in an interactive mode
  *@memb: a struct object that will be used to access the structure
  *Return: (1) if in the interactive mode else (0)
  */
@@ -43,7 +43,7 @@ int n_isalpha(int p)
 
 
 /**
- * _atoi - converts a string to an integer
+ * n_atoi - converts a string to an integer
  * @s: string to be converted
  *
  * Return: the int converted from the string
