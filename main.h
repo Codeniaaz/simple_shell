@@ -169,7 +169,7 @@ int n_atoi(char *);
 /************ a_errors1.c ************/
 int n_erratoi(char *);
 void n_print_error(memb_t *, char *);
-int n_prn_int_d(int, int);
+int n_print_d(int, int);
 char *n_convert_number(long int, int, int);
 void n_remove_comments(char *);
 
@@ -225,7 +225,7 @@ size_t n_print_list(const list_t *);
 list_t *n_node_starts_with(list_t *, char *, char);
 ssize_t n_get_node_index(list_t *, list_t *);
 
-/* toem_vars.c */
+/*********** a_vars.c ******************/
 int n_is_chain(memb_t *, char *, size_t *);
 void n_check_chain(memb_t *, char *, size_t *, size_t, size_t);
 int n_replace_alias(memb_t *);
