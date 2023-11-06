@@ -125,7 +125,7 @@ char *n_find_path(memb_t *, char *, char *);
 /* loophsh.c */
 int n_loophsh(char **);
 
-/* toem_errors.c */
+/*********** a_errors_0.c *********/
 void n_eputs(char *);
 int n_eputchar(char);
 int n_putfd(char c, int fd);
@@ -166,7 +166,7 @@ int n_is_delim(char, char *);
 int n_isalpha(int);
 int n_atoi(char *);
 
-/* toem_errors1.c */
+/************ a_errors1.c ************/
 int n_erratoi(char *);
 void n_print_error(memb_t *, char *);
 int n_prn_int_d(int, int);
