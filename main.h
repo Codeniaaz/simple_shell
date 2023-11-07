@@ -182,7 +182,7 @@ int n_myhelp(memb_t *);
 int n_myhistory(memb_t *);
 int n_myalias(memb_t *);
 
-/*toem_getline.c */
+/*********** a_getline.c **********/
 ssize_t n_get_input(memb_t *);
 int n_getline(memb_t *, char **, size_t *);
 void n_sigintHandler(int);
