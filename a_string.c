@@ -12,7 +12,7 @@ int n_strlen(char *c)
 	if (!c)
 		return (0);
 
-	while (*cs++)
+	while (*c++)
 		i++;
 	return (i);
 }

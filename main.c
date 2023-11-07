@@ -34,7 +34,7 @@ int main(int argc, char **argv)
 			}
 			return (EXIT_FAILURE);
 		}
-		memb->readfd = fd;
+		member->readfd = fd;
 	}
 	n_populate_env_list(member);
 	n_read_history(member);

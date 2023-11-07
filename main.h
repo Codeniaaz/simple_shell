@@ -95,7 +95,7 @@ typedef struct passinfo
 	int histcount;
 } memb_t;
 
-#define INFO_INIT \
+#define MEMB_INIT \
 {NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
 	0, 0, 0}
 
@@ -186,6 +186,8 @@ int n_myalias(memb_t *);
 ssize_t n_get_input(memb_t *);
 int n_getline(memb_t *, char **, size_t *);
 void n_sigintHandler(int);
+ssize_t n_read_buf(memb_t *, char *, size_t *);
+ssize_t n_input_buf(memb_t *, char **, size_t *);
 
 /*************** a_getinfo.c **************/
 void n_clear_info(memb_t *);

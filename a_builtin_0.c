@@ -11,16 +11,16 @@ int n_my_exit(memb_t *member)
 
 	if (member->argv[1])
 	{
-		n_exitcheck = n_erroratoi(member->argv[1]);
+		n_exitcheck = n_erratoi(member->argv[1]);
 		if (n_exitcheck == -1)
 		{
 			member->status = 2;
 			n_print_error(member, "Illegal number: ");
-			n_inputs(member->argv[1]);
-			n_inputchar('\n');
+			n_puts(member->argv[1]);
+			n_putchar('\n');
 			return (1);
 		}
-		member->err_num = n_erroratoi(member->argv[1]);
+		member->err_num = n_erratoi(member->argv[1]);
 
 		return (-2);
 	}
@@ -49,7 +49,7 @@ int n_my_cd(memb_t *member)
 		else
 			chdir_ret = chdir(dir);
 	}
-	else if (n_my_strcmp(member > argv[1], "-") == 0)
+	else if (n_strcmp(member->argv[1], "-") == 0)
 	{
 		if (!n_getenv(member, "OLDPWD="))
 		{
@@ -66,8 +66,8 @@ int n_my_cd(memb_t *member)
 	if (chdir_ret == -1)
 	{
 		n_print_error(member, "can't cd to ");
-		n_inputs(member->argv[1]);
-		n_inputchar('\n');
+		n_puts(member->argv[1]);
+		n_putchar('\n');
 	}
 	else
 	{

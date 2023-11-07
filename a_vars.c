@@ -1,4 +1,4 @@
-#include "main."
+#include "main.h"
 
 /**
  *n_is_chain - func that tests if char buffer is

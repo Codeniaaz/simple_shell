@@ -47,9 +47,9 @@ int n_set_alias(memb_t *memb, char *str)
 	if (!p)
 		return (1);
 	if (!*++p)
-		return (n_unset_alias(memb, str));
+		return (n_set_alias(memb, str));
 
-	n_unset_alias(memb, str);
+	n_set_alias(memb, str);
 	return (n_add_node_end(&(memb->alias), str, 0) == NULL);
 }
 
@@ -91,7 +91,7 @@ int n_myalias(memb_t *member)
 		node = member->alias;
 		while (node)
 		{
-			print_alias(node);
+			n_print_alias(node);
 			node = node->next;
 		}
 		return (0);
@@ -100,7 +100,7 @@ int n_myalias(memb_t *member)
 	{
 		p = n_strchr(member->argv[i], '=');
 		if (p)
-			n_set_alias(info, member->argv[i]);
+			n_set_alias(member, member->argv[i]);
 		else
 			n_print_alias(n_node_starts_with(member->alias, member->argv[i], '='));
 	}

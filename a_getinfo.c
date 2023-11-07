@@ -7,10 +7,10 @@
  */
 void n_clear_info(memb_t *member)
 {
-	memb->arg = NULL;
-	memb->argv = NULL;
-	memb->path = NULL;
-	memb->argc = 0;
+	member->arg = NULL;
+	member->argv = NULL;
+	member->path = NULL;
+	member->argc = 0;
 }
 
 /**
@@ -60,11 +60,11 @@ void n_free_info(memb_t *member, int all)
 		if (!member->cmd_buf)
 			free(member->arg);
 		if (member->env)
-			free_list(&(member->env));
+			n_free_list(&(member->env));
 		if (member->history)
-			free_list(&(member->history));
+			n_free_list(&(member->history));
 		if (member->alias)
-			free_list(&(member->alias));
+			n_free_list(&(member->alias));
 		n_ffree(member->environ);
 			member->environ = NULL;
 		n_bfree((void **)member->cmd_buf);

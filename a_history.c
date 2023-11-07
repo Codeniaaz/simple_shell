@@ -40,7 +40,7 @@ int n_write_history(memb_t *member)
 	free(filename);
 	if (fd == -1)
 		return (-1);
-	for (node = info->history; node; node = node->next)
+	for (node = member->history; node; node = node->next)
 	{
 		n_putsfd(node->str, fd);
 		n_putfd('\n', fd);

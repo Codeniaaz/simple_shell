@@ -25,7 +25,7 @@ size_t n_list_len(const list_t *j)
 char **n_list_to_strings(list_t *head)
 {
 	list_t *node = head;
-	size_t i = list_len(head), j;
+	size_t i = n_list_len(head), j;
 	char **strs;
 	char *str;
 
@@ -36,7 +36,7 @@ char **n_list_to_strings(list_t *head)
 		return (NULL);
 	for (i = 0; node; node = node->next, i++)
 	{
-		str = malloc(_strlen(node->str) + 1);
+		str = malloc(n_strlen(node->str) + 1);
 		if (!str)
 		{
 			for (j = 0; j < i; j++)
@@ -61,7 +61,7 @@ size_t n_print_list(const list_t *j)
 {
 	size_t i = 0;
 
-	while (h)
+	while (j)
 	{
 		n_puts(n_convert_number(j->num, 10, 0));
 		n_putchar(':');

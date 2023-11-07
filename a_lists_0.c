@@ -19,7 +19,7 @@ list_t *n_add_node(list_t **head, const char *str, int numbs)
 
 	n_memset((void *)new_head, 0, sizeof(list_t));
 
-	new_head->numbs = numbs;
+	new_head->num = numbs;
 	if (str)
 	{
 		new_head->str = n_strdup(str);
@@ -56,7 +56,7 @@ list_t *n_add_node_end(list_t **head, const char *str, int numbs)
 
 	n_memset((void *)new_node, 0, sizeof(list_t));
 
-	new_node->numbs = numbs;
+	new_node->num = numbs;
 
 	if (str)
 	{

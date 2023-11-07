@@ -60,7 +60,7 @@ int n_print_d(int buffer, int fd)
 		__putchar = n_eputchar;
 	if (buffer < 0)
 	{
-		_abs_ = -input;
+		_abs_ = -buffer;
 		__putchar('-');
 		count++;
 	}

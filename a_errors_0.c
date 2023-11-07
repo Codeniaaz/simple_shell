@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * n_inputs - Prints an input string to stderr.
+ * n_eputs - Prints an input string to stderr.
  * @str: String to be printed
  * Return: void
  */
-void n_inputs(char *str)
+void n_eputs(char *str)
 {
 	int i = 0;
 
@@ -14,17 +14,17 @@ void n_inputs(char *str)
 
 	while (str[i] != '\0')
 	{
-		n_inputchar(str[i]);
+		n_putchar(str[i]);
 		i++;
 	}
 }
 
 /**
- * n_inputchar - Writes the char r to stderr.
+ * n_eputchar - Writes the char r to stderr.
  * @r: The char to print.
  * Return: 1 on success. On error, -1 and errno
  */
-int n_inputchar(char r)
+int n_eputchar(char r)
 {
 	static char buf[WRITE_BUF_SIZE];
 	static int i;

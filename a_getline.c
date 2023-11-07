@@ -117,9 +117,9 @@ int n_getline(memb_t *member, char **ptr, size_t *length)
 		return (p ? free(p), -1 : -1);
 
 	if (s)
-		_strncat(new_p, buf + i, k - i);
+		n_strncat(new_p, buf + i, k - i);
 	else
-		_strncpy(new_p, buf + i, k - i + 1);
+		n_strncpy(new_p, buf + i, k - i + 1);
 
 	s += k - i;
 	i = k;

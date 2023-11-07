@@ -63,7 +63,7 @@ int n_setenv(memb_t *member, char *variable, char *val)
 	if (!variable || !val)
 		return (0);
 
-	buffer = malloc(n_my_strlen(variable) + n_my_strlen(val) + 2);
+	buffer = malloc(n_strlen(variable) + n_strlen(val) + 2);
 	if (!buffer)
 		return (1);
 	n_strcpy(buffer, variable);
