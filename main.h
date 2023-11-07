@@ -218,7 +218,7 @@ size_t n_print_list_str(const list_t *);
 int n_delete_node_at_index(list_t **, unsigned int);
 void n_free_list(list_t **);
 
-/* toem_lists1.c */
+/************ a_lists1.c ************/
 size_t n_list_len(const list_t *);
 char **n_list_to_strings(list_t *);
 size_t n_print_list(const list_t *);
