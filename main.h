@@ -137,7 +137,7 @@ int n_strcmp(char *, char *);
 char *n_starts_with(const char *, const char *);
 char *n_strcat(char *, char *);
 
-/* toem_string1.c */
+/************* a_string1.c **********/
 char *n_strcpy(char *, char *);
 char *n_strdup(const char *);
 void n_puts(char *);
