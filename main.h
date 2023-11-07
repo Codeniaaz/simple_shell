@@ -111,13 +111,13 @@ typedef struct builtin
 } builtin_table;
 
 
-/* toem_shloop.c */
+/*********** a_shloop.c **************/
 int n_hsh(memb_t *, char **);
 int n_find_builtin(memb_t *);
 void n_find_cmd(memb_t *);
 void n_fork_cmd(memb_t *);
 
-/* toem_parser.c */
+/************** a_parser.c **************/
 int n_is_cmd(memb_t *, char *);
 char *n_dup_chars(char *, int, int);
 char *n_find_path(memb_t *, char *, char *);
