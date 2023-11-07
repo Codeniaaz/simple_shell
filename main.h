@@ -148,7 +148,7 @@ char *n_strncpy(char *, char *, int);
 char *n_strncat(char *, char *, int);
 char *n_strchr(char *, char);
 
-/* toem_tokenizer.c */
+/**************** a_token.c *****************/Sijafanya hii
 char **n_strtow(char *, char *);
 char **n_strtow2(char *, char);
 
@@ -157,7 +157,7 @@ char *n_memset(char *, char, unsigned int);
 void n_ffree(char **);
 void *n_realloc(void *, unsigned int, unsigned int);
 
-/* toem_memory.c */
+/******************* a_memory.c **************/
 int n_bfree(void **);
 
 /************** a_custom_atoi.c ************/
