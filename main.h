@@ -131,7 +131,7 @@ int n_eputchar(char);
 int n_putfd(char c, int fd);
 int n_putsfd(char *str, int fd);
 
-/* toem_string.c */
+/**************** a_string.c ******************/
 int n_strlen(char *);
 int n_strcmp(char *, char *);
 char *n_starts_with(const char *, const char *);
