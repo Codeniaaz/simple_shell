@@ -152,7 +152,7 @@ char *n_strchr(char *, char);
 char **n_strtow(char *, char *);
 char **n_strtow2(char *, char);
 
-/* toem_realloc.c */
+/***************** a_realloc.c **************/
 char *n_memset(char *, char, unsigned int);
 void n_ffree(char **);
 void *n_realloc(void *, unsigned int, unsigned int);
@@ -187,7 +187,7 @@ ssize_t n_get_input(memb_t *);
 int n_getline(memb_t *, char **, size_t *);
 void n_sigintHandler(int);
 
-/* toem_getinfo.c */
+/*************** a_getinfo.c **************/
 void n_clear_info(memb_t *);
 void n_set_info(memb_t *, char **);
 void n_free_info(memb_t *, int);
