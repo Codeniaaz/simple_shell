@@ -143,12 +143,12 @@ char *n_strdup(const char *);
 void n_puts(char *);
 int n_putchar(char);
 
-/* toem_exits.c */
+/************** a_exits.c *************/
 char *n_strncpy(char *, char *, int);
 char *n_strncat(char *, char *, int);
 char *n_strchr(char *, char);
 
-/**************** a_token.c *****************/Sijafanya hii
+/**************** a_token.c *****************/
 char **n_strtow(char *, char *);
 char **n_strtow2(char *, char);
 
