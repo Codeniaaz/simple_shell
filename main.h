@@ -152,7 +152,7 @@ char *n_strchr(char *, char);
 char **n_strtow(char *, char *);
 char **n_strtow2(char *, char);
 
-/* toem_realloc.c */
+/***************** a_realloc.c **************/
 char *n_memset(char *, char, unsigned int);
 void n_ffree(char **);
 void *n_realloc(void *, unsigned int, unsigned int);
