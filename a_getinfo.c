@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "main.h"
 
 /**
  * n_clear_info - initializes memb_t structure
