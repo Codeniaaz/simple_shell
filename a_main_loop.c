@@ -15,7 +15,7 @@ int n_hsh(memb_t *member, char **av)
 	{
 		n_clear_info(member);
 		if (n_interactive(member))
-			n_puts("$ ");
+			n_puts("#cisfun$ ");
 		n_eputchar(BUF_FLUSH);
 		r = n_get_input(member);
 		if (r != -1)
