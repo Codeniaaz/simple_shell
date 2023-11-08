@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * n_my_exit - function name
+ * n_myexit - function name
  * @member: argument name
  * Return: always success
  */
-int n_my_exit(memb_t *member)
+int n_myexit(memb_t *member)
 {
 	int n_exitcheck;
 
@@ -29,18 +29,18 @@ int n_my_exit(memb_t *member)
 }
 
 /**
- * n_my_cd - Changes  current directory of the process.
+ * n_mycd - Changes  current directory of the process.
  * @member: Structure member containing potential arguments.
  * Return: Always success.
  */
-int n_my_cd(memb_t *member)
+int n_mycd(memb_t *member)
 {
 	char *v, *dir, buffer[1024];
 	int chdir_ret;
 
 	v = getcwd(buffer, 1024);
 	if (!v)
-		n_puts("ERROR: >>getcwd failed<<\n");
+		n_puts("ERROR: getcwd failed\n");
 	if (!member->argv[1])
 	{
 		dir = n_getenv(member, "HOME=");
@@ -78,11 +78,11 @@ int n_my_cd(memb_t *member)
 }
 
 /**
- * n_my_help - Prints a help message for the shell.
+ * n_myhelp - Prints a help message for the shell.
  * @member: Structure containing potential arguments.
  * Return: Always success.
  */
-int n_my_help(memb_t *member)
+int n_myhelp(memb_t *member)
 {
 	char **args_arr;
 

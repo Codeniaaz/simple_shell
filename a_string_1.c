@@ -59,7 +59,7 @@ void n_puts(char *str)
 		return;
 	while (str[i] != '\0')
 	{
-		_putchar(str[i]);
+		n_putchar(str[i]);
 		i++;
 	}
 }
