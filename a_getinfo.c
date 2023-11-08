@@ -15,7 +15,7 @@ void n_clear_info(memb_t *member)
 
 /**
  * n_set_info - initializes memb_t struct
- * @memb: structure address
+ * @member: structure address
  * @av: argument vector
  * Return: void
  */
@@ -36,8 +36,8 @@ void n_set_info(memb_t *member, char **av)
 				member->argv[1] = NULL;
 			}
 		}
-		for (i = 0; member->argv && member->argv[i]; i++);
-		member->argc = i;
+		for (i = 0; member->argv && member->argv[i]; i++)
+			member->argc = i;
 
 		n_replace_alias(member);
 		n_replace_vars(member);

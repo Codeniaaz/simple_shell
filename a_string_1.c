@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strcpy - copies a string
+ * n_strcpy - copies a string
  * @dest: the destination
  * @src: the source
  *
@@ -23,7 +23,7 @@ char *n_strcpy(char *dest, char *src)
 }
 
 /**
- * _strdup - duplicates a string
+ * n_strdup - duplicates a string
  * @str: the string to duplicate
  *
  * Return: pointer to the duplicated string
@@ -46,7 +46,7 @@ char *n_strdup(const char *str)
 }
 
 /**
- *_puts - prints an input string
+ * n_puts - prints an input string
  *@str: the string to be printed
  *
  * Return: Nothing
