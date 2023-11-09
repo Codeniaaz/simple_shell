@@ -47,9 +47,9 @@ int n_set_alias(memb_t *memb, char *str)
 	if (!p)
 		return (1);
 	if (!*++p)
-		return (n_set_alias(memb, str));
+		return (n_unset_alias(memb, str));
 
-	n_set_alias(memb, str);
+	n_unset_alias(memb, str);
 	return (n_add_node_end(&(memb->alias), str, 0) == NULL);
 }
 

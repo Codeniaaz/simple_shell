@@ -180,6 +180,9 @@ int n_myhelp(memb_t *);
 
 /************ a_builtin1.c *********/
 int n_myhistory(memb_t *);
+int n_set_alias(memb_t *, char *);
+int n_unset_alias(memb_t *, char *);
+int n_print_alias(list_t *);
 int n_myalias(memb_t *);
 
 /*********** a_getline.c **********/

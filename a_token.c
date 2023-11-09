@@ -12,7 +12,7 @@ char **n_strtow(char *str, char *d)
 	int i, j, k, m, numwords = 0;
 	char **s;
 
-	if (str == NULL || str[0] == 0)
+	if (str == NULL || str[0] == '\0')
 		return (NULL);
 	if (!d)
 		d = " ";
@@ -42,7 +42,7 @@ char **n_strtow(char *str, char *d)
 		}
 		for (m = 0; m < k; m++)
 			s[j][m] = str[i++];
-		s[j][m] = 0;
+		s[j][m] = '\0';
 	}
 	s[j] = NULL;
 	return (s);
@@ -59,7 +59,7 @@ char **n_strtow2(char *str, char d)
 	int i, j, k, m, numwords = 0;
 	char **s;
 
-	if (str == NULL || str[0] == 0)
+	if (str == NULL || str[0] == '\0')
 		return (NULL);
 	for (i = 0; str[i] != '\0'; i++)
 		if ((str[i] != d && str[i + 1] == d) ||
@@ -87,7 +87,7 @@ char **n_strtow2(char *str, char d)
 		}
 		for (m = 0; m < k; m++)
 			s[j][m] = str[i++];
-		s[j][m] = 0;
+		s[j][m] = '\0';
 	}
 	s[j] = NULL;
 	return (s);

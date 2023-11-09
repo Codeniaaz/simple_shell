@@ -14,19 +14,19 @@ int n_is_chain(memb_t *member, char *buffer, size_t *q)
 
 	if (buffer[j] == '|' && buffer[j + 1] == '|')
 	{
-		buffer[j] = 0;
+		buffer[j] = '\0';
 		j++;
 		member->cmd_buf_type = CMD_OR;
 	}
 	else if (buffer[j] == '&' && buffer[j + 1] == '&')
 	{
-		buffer[j] = 0;
+		buffer[j] = '\0';
 		j++;
 		member->cmd_buf_type = CMD_AND;
 	}
 	else if (buffer[j] == ';')
 	{
-		buffer[j] = 0;
+		buffer[j] = '\0';
 		member->cmd_buf_type = CMD_CHAIN;
 	}
 	else
