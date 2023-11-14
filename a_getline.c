@@ -159,6 +159,6 @@ ssize_t n_read_buf(memb_t *info, char *buf, size_t *i)
 void n_sigintHandler(__attribute__((unused))int sig_num)
 {
 	n_puts("\n");
-	n_puts("$ ");
+	n_puts("#cisfun$ ");
 	n_putchar(BUF_FLUSH);
 }

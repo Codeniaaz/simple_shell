@@ -44,7 +44,7 @@ int n_isalpha(int b)
 
 /**
  * n_atoi - converts a string to an integer
- * @s: string to be converted
+ * @str: string to be converted
  * Return: the int converted from the string
  */
 int n_atoi(char *str)

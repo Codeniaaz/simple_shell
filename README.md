@@ -1,6 +1,6 @@
                  SIMPLE_SHELL PROJECT.
 
-/****************************task 1************************************************/
+/****************************task *******************************************/
 Simple Shell Program
 	This is a simple shell program written in C. It provides a basic command-line interface for executing commands. The shell displays a prompt, reads user input, and then executes the entered command.
 
