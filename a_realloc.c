@@ -2,33 +2,33 @@
 
 /**
  **n_memset - fills memory with a constant bytes
- *@t: pointer to the memory area
- *@b: byte to fill *t with
- *@num: amount of bytes to be filled
- *Return: (t) a pointer to the memory area t
+ *@d: pointer to the memory area
+ *@b: byte to fill *d with
+ *@numbs: amount of bytes to be filled
+ *Return: (d) a pointer to the memory area d
  */
-char *n_memset(char *t, char b, unsigned int num)
+char *n_memset(char *d, char b, unsigned int numbs)
 {
 	unsigned int i;
 
-	for (i = 0; i < num; i++)
-		t[i] = b;
-	return (t);
+	for (i = 0; i < numbs; i++)
+		d[i] = b;
+	return (d);
 }
 
 /**
- * n_ffree - frees a string of strings
- * @dp: double pointer strings
+ * n_ffree - frees a pointer of strings
+ * @dptr: double pointer strings
  * Return: nothing, void.
  */
-void n_ffree(char **dp)
+void n_ffree(char **dptr)
 {
-	char **a = dp;
+	char **a = dptr;
 
-	if (!dp)
+	if (!dptr)
 		return;
-	while (*dp)
-		free(*dp++);
+	while (*dptr)
+		free(*dptr++);
 	free(a);
 }
 

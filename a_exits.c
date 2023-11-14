@@ -4,57 +4,57 @@
  *n_strncpy - function copies a string
  *@dest: destination string
  *@src: source string
- *@a: amount chars
+ *@n: amount chars
  *Return: the concanated string
  */
-char *n_strncpy(char *dest, char *src, int a)
+char *n_strncpy(char *dest, char *src, int n)
 {
 	int i, j;
-	char *s = dest;
+	char *str = dest;
 
 	i = 0;
-	while (src[i] != '\0' && i < a - 1)
+	while (src[i] != '\0' && i < n - 1)
 	{
 		dest[i] = src[i];
 		i++;
 	}
-	if (i < a)
+	if (i < n)
 	{
 		j = i;
-		while (j < a)
+		while (j < n)
 		{
 			dest[j] = '\0';
 			j++;
 		}
 	}
-	return (s);
+	return (str);
 }
 
 /**
- *n_strncat - func that concats two strings
- *@dest: destination
- *@src: source
- *@a: amount of chars
+ *n_strncat - function that concatenates two strings
+ *@dest: destination string
+ *@src: source string
+ *@n: amount of chars
  *Return: the concatenated string
  */
-char *n_strncat(char *dest, char *src, int a)
+char *n_strncat(char *dest, char *src, int n)
 {
 	int i, j;
-	char *s = dest;
+	char *str = dest;
 
 	i = 0;
 	j = 0;
 	while (dest[i] != '\0')
 		i++;
-	while (src[j] != '\0' && j < a)
+	while (src[j] != '\0' && j < n)
 	{
 		dest[i] = src[j];
 		i++;
 		j++;
 	}
-	if (j < a)
+	if (j < n)
 		dest[i] = '\0';
-	return (s);
+	return (str);
 }
 
 /**

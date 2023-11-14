@@ -13,15 +13,15 @@ int n_interactive(memb_t *memb)
 
 /**
  *n_is_delim - to check for the delimeter
- *@delimeter: is the delimeter to be passed
- *@c: a string that will be used to check for the delimiter
+ *@delimeter: delimeter to be passed
+ *@z: a string that will be used to check for the delimiter
  *Return: (1) if the delimeter is found else (0)
  */
-int n_is_delim(char delimeter, char *c)
+int n_is_delim(char delimeter, char *z)
 {
-	while (*c)
+	while (*z)
 	{
-		if (*c++ == delimeter)
+		if (*z++ == delimeter)
 			return (1);
 	}
 	return (0);
@@ -29,13 +29,13 @@ int n_is_delim(char delimeter, char *c)
 
 /**
  *n_isalpha - checks for alphabetic character
- *@p: The character to input
+ *@b: The character to input
  *Return: (1) if p is alphabetic, else (0)
  */
 
-int n_isalpha(int p)
+int n_isalpha(int b)
 {
-	if ((p >= 'a' && p <= 'z') || (p >= 'A' && p <= 'Z'))
+	if ((b >= 'a' && b <= 'z') || (b >= 'A' && b <= 'Z'))
 		return (1);
 	else
 		return (0);
@@ -45,40 +45,39 @@ int n_isalpha(int p)
 /**
  * n_atoi - converts a string to an integer
  * @s: string to be converted
- *
  * Return: the int converted from the string
  */
-int n_atoi(char *s)
+int n_atoi(char *str)
 {
-	int i, d, n, len, f, digit;
+	int x, d, n, len, f, digit;
 
-	i = 0;
+	x = 0;
 	d = 0;
 	n = 0;
 	len = 0;
 	f = 0;
 	digit = 0;
 
-	while (s[len] != '\0')
+	while (str[len] != '\0')
 		len++;
 
-	while (i < len && f == 0)
+	while (x < len && f == 0)
 	{
-		if (s[i] == '-')
+		if (str[x] == '-')
 			++d;
 
-		if (s[i] >= '0' && s[i] <= '9')
+		if (str[x] >= '0' && str[x] <= '9')
 		{
-			digit = s[i] - '0';
+			digit = str[x] - '0';
 			if (d % 2)
 				digit = -digit;
 			n = n * 10 + digit;
 			f = 1;
-			if (s[i + 1] < '0' || s[i + 1] > '9')
+			if (str[x + 1] < '0' || str[x + 1] > '9')
 				break;
 			f = 0;
 		}
-		i++;
+		x++;
 	}
 
 	if (f == 0)

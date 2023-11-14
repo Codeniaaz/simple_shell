@@ -20,48 +20,48 @@ void n_eputs(char *str)
 }
 
 /**
- * n_eputchar - Writes the char r to stderr.
- * @r: The char to print.
- * Return: 1 on success. On error, -1 and errno
+ * n_eputchar - Writes the char v to stderr.
+ * @v: The char to printed
+ * Return: 1 on success, error, -1 and errno
  */
-int n_eputchar(char r)
+int n_eputchar(char v)
 {
 	static char buf[WRITE_BUF_SIZE];
 	static int i;
 
-	if (r == BUF_FLUSH || i >= WRITE_BUF_SIZE)
+	if (v == BUF_FLUSH || i >= WRITE_BUF_SIZE)
 	{
 		write(2, buf, i);
 		i = 0;
 	}
 
-	if (r != BUF_FLUSH)
+	if (v != BUF_FLUSH)
 	{
-		buf[i++] = r;
+		buf[i++] = v;
 	}
 		return (1);
 }
 
 /**
- * n_putfd - Writes the char r to the given fd.
- * @r: Character to print.
+ * n_putfd - Writes the char v to the given file descriptor
+ * @v: Character to print.
  * @fd: File descriptor to write to.
- * Return: On success 1. On error, -1 is returned and errno
+ * Return: On success 1, On error, -1 is returned and errno
  */
-int n_putfd(char r, int fd)
+int n_putfd(char v, int fd)
 {
 	static int n;
 	static char buf[WRITE_BUF_SIZE];
 
-	if (r == BUF_FLUSH || n >= WRITE_BUF_SIZE)
+	if (v == BUF_FLUSH || n >= WRITE_BUF_SIZE)
 	{
 		write(fd, buf, n);
 		n = 0;
 	}
 
-	if (r != BUF_FLUSH)
+	if (v != BUF_FLUSH)
 	{
-		buf[n++] = r;
+		buf[n++] = v;
 	}
 		return (1);
 }
@@ -69,8 +69,8 @@ int n_putfd(char r, int fd)
 /**
  * n_putsfd - Prints an input string to the specified file descriptor.
  * @str: String to be printed.
- * @fd: Filedescriptor to write into.
- * Return: The number of characters put.
+ * @fd: File descriptor to write into.
+ * Return: no. of characters
  */
 int n_putsfd(char *str, int fd)
 {

@@ -1,9 +1,8 @@
 #include "main.h"
 
 /**
- *n_is_chain - func that tests if char buffer is
- *a chain delimiter
- *@member: the parameter struct
+ *n_is_chain - function that tests if char buffer
+ *@member: parameter structure
  *@buffer: char buffer
  *@q: address of current position
  *Return: 1 if succes, 0 otherwise
@@ -36,17 +35,16 @@ int n_is_chain(memb_t *member, char *buffer, size_t *q)
 }
 
 /**
- *n_check_chain - func that checks if we should continue chaining based
- *on last status
- * @member: the struct
+ * n_check_chain - func that checks if we should continue chaining based
+ * @member: the structure
  * @buffer: the char buffer
  * @q: address of current position in buffer
  * @i: starting position in buffer
- * @len: length of bufffer
+ * @length: length of bufffer
  * Return: void
  */
 void n_check_chain(memb_t *member, char *buffer,
-		size_t *q, size_t i, size_t len)
+		size_t *q, size_t i, size_t length)
 {
 	size_t j = *q;
 
@@ -55,7 +53,7 @@ void n_check_chain(memb_t *member, char *buffer,
 		if (member->status)
 		{
 			buffer[i] = 0;
-			j = len;
+			j = length;
 		}
 	}
 	if (member->cmd_buf_type == CMD_OR)
@@ -63,7 +61,7 @@ void n_check_chain(memb_t *member, char *buffer,
 		if (!member->status)
 		{
 			buffer[i] = 0;
-			j = len;
+			j = length;
 		}
 	}
 

@@ -9,13 +9,13 @@
 char *n_getenv(memb_t *member, const char *c)
 {
 	list_t *node = member->env;
-	char *p;
+	char *b;
 
 	while (node)
 	{
-		p = n_starts_with(node->str, c);
-		if (p && *p)
-			return (p);
+		b = n_starts_with(node->str, c);
+		if (b && *b)
+			return (b);
 		node = node->next;
 	}
 	return (NULL);

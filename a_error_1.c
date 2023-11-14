@@ -2,35 +2,35 @@
 
 /**
  *n_erratoi - converts a string to a integer
- *@c: string to be converted and should be numerics
+ *@str: string to be converted and should be numerics
  *Return: success and -1 on error
  */
-int n_erratoi(char *c)
+int n_erratoi(char *str)
 {
 	int i = 0;
-	unsigned long int result = 0;
+	unsigned long int mark = 0;
 
-	if (*c == '+')
-		c++;
-	for (i = 0;  c[i] != '\0'; i++)
+	if (*str == '+')
+		str++;
+	for (i = 0;  str[i] != '\0'; i++)
 	{
-		if (c[i] >= '0' && c[i] <= '9')
+		if (str[i] >= '0' && str[i] <= '9')
 		{
-			result *= 10;
-			result += (c[i] - '0');
-			if (result > INT_MAX)
+			mark *= 10;
+			mark += (str[i] - '0');
+			if (mark > INT_MAX)
 				return (-1);
 		}
 		else
 			return (-1);
 	}
-	return (result);
+	return (mark);
 }
 
 /**
  *n_print_error - prints error messages
  *@member: Struct containing all the needed arguments
- *@str: a string
+ *@str: array of characters, string
  *Return: success and -1 on error
  */
 void n_print_error(memb_t *member, char *str)
@@ -45,15 +45,15 @@ void n_print_error(memb_t *member, char *str)
 }
 
 /**
- *n_print_d - function tat prints decimal integer
- *@buffer: the input
+ *n_print_d - function that prints decimal integer
+ *@buffer: integer input
  *@fd: the file descriptor
- *Return: num of chars printed
+ *Return: number of chars printed
  */
 int n_print_d(int buffer, int fd)
 {
 	int (*__putchar)(char) = n_putchar;
-	int i, count = 0;
+	int i, counter = 0;
 	unsigned int _abs_, current;
 
 	if (fd == STDERR_FILENO)
@@ -62,7 +62,7 @@ int n_print_d(int buffer, int fd)
 	{
 		_abs_ = -buffer;
 		__putchar('-');
-		count++;
+		counter++;
 	}
 	else
 		_abs_ = buffer;
@@ -72,22 +72,22 @@ int n_print_d(int buffer, int fd)
 		if (_abs_ / i)
 		{
 			__putchar('0' + current / i);
-			count++;
+			counter++;
 		}
 		current %= i;
 	}
 	__putchar('0' + current);
-	count++;
+	counter++;
 
-	return (count);
+	return (counter);
 }
 
 /**
  *n_convert_number - clone of itoa
- *@num: number
- *@base: base
- *@flags: argument flags
- *Return: string
+ *@num: long integer number
+ *@base: integer base
+ *@flags: argument
+ *Return: string, always success
  */
 char *n_convert_number(long int num, int base, int flags)
 {
