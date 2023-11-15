@@ -2,16 +2,15 @@
 
 /**
  * n_is_cmd - determines if a file is an executable command
- * @info: the info struct
+ * @member: the member struct
  * @path: path to the file
- *
  * Return: 1 if true, 0 otherwise
  */
-int n_is_cmd(memb_t *info, char *path)
+int n_is_cmd(memb_t *member, char *path)
 {
 	struct stat st;
 
-	(void)info;
+	(void)member;
 	if (!path || stat(path, &st))
 		return (0);
 
@@ -26,8 +25,7 @@ int n_is_cmd(memb_t *info, char *path)
  * n_dup_chars - duplicates characters
  * @pathstr: the PATH string
  * @start: starting index
- * @stop: stopping index
- *
+ * @stop: stopping inde
  * Return: pointer to new buffer
  */
 char *n_dup_chars(char *pathstr, int start, int stop)
@@ -44,13 +42,12 @@ char *n_dup_chars(char *pathstr, int start, int stop)
 
 /**
  * n_find_path - finds this cmd in the PATH string
- * @info: the info struct
+ * @member: the info struct
  * @pathstr: the PATH string
  * @cmd: the cmd to find
- *
  * Return: full path of cmd if found or NULL
  */
-char *n_find_path(memb_t *info, char *pathstr, char *cmd)
+char *n_find_path(memb_t *member, char *pathstr, char *cmd)
 {
 	int i = 0, curr_pos = 0;
 	char *path;
@@ -59,7 +56,7 @@ char *n_find_path(memb_t *info, char *pathstr, char *cmd)
 		return (NULL);
 	if ((n_strlen(cmd) > 2) && n_starts_with(cmd, "./"))
 	{
-		if (n_is_cmd(info, cmd))
+		if (n_is_cmd(member, cmd))
 			return (cmd);
 	}
 	while (1)
@@ -74,7 +71,7 @@ char *n_find_path(memb_t *info, char *pathstr, char *cmd)
 				n_strcat(path, "/");
 				n_strcat(path, cmd);
 			}
-			if (n_is_cmd(info, path))
+			if (n_is_cmd(member, path))
 				return (path);
 			if (!pathstr[i])
 				break;
