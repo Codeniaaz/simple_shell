@@ -11,6 +11,11 @@ char *n_memset(char *d, char b, unsigned int numbs)
 {
 	unsigned int i;
 
+	if (d == NULL || numbs == 0)
+	{
+		return (NULL);
+	}
+
 	for (i = 0; i < numbs; i++)
 		d[i] = b;
 	return (d);
