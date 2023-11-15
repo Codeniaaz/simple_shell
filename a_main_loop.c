@@ -108,7 +108,7 @@ void n_find_cmd(memb_t *member)
 		else if (*(member->arg) != '\n')
 		{
 			member->status = 127;
-			n_print_error(member, "not found\n");
+			n_print_error(member, "No such file or directory\n");
 		}
 	}
 }
